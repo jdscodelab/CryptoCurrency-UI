@@ -1,0 +1,253 @@
+﻿<Window x:Class="CryptoCurrency_UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CryptoCurrency_UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="765" Width="1268" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="90"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+    </Window.Resources>
+    <Border CornerRadius="80" BorderThickness="8" BorderBrush="Black" Background="#F5F3FB">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="335"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border CornerRadius="40" Width="95" Background="#1D212C" Margin="28,25,28,25">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/assets/diamond.png" Width="32" Margin="0,55"/>
+                    <Button Margin="0,30,0,0" Style="{StaticResource MenuButtonStyle}">
+                        <Image Source="/assets/collage.png" Width="22"/>
+                    </Button>
+                    <Button Style="{StaticResource MenuButtonStyle}">
+                        <StackPanel>
+                            <Image Source="/assets/convert.png" Width="22"/>
+                            <Ellipse Width="5" Height="5" Fill="White" Margin="3"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource MenuButtonStyle}">
+                        <Image Source="/assets/prop.png" Width="22"/>
+                    </Button>
+                    <Button Style="{StaticResource MenuButtonStyle}">
+                        <Image Source="/assets/notif.png" Width="22"/>
+                    </Button>
+                    <Button Style="{StaticResource MenuButtonStyle}">
+                        <Image Source="/assets/profile.png" Width="22"/>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <StackPanel Orientation="Vertical" Grid.Column="1" Margin="27,78,52,0">
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Wallet" FontSize="26" FontFamily="Leelawadee"/>
+                <Grid Margin="0,60,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="USD " FontSize="20" Foreground="#1D212C"/>
+                        <Image Source="/assets/down.png" Width="12"/>
+                    </StackPanel>
+                    <TextBlock x:Name="textBlock1" Grid.Column="1" HorizontalAlignment="Right" Text="$ 159 001.212" FontSize="20" VerticalAlignment="Top" FontFamily="PT Sans Pro Narrow"/>
+                    <TextBlock Grid.Row="1" HorizontalAlignment="Left" Text="Market Value" FontSize="12" VerticalAlignment="Top" FontFamily="PT Sans" Foreground="#92969F"/>
+                    <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Text="Total Balance" FontSize="12" VerticalAlignment="Top" FontFamily="PT Sans" Foreground="#92969F"/>
+                </Grid>
+                <Separator Margin="0,35,0,0"/>
+                <Grid Margin="0,52" Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="17" RadiusY="17" MaxHeight="40" Grid.RowSpan="2" Margin="1,5,0,2.5" Fill="White"/>
+                    <Image Source="/assets/bitcoin.png" Width="25" Margin="8,12,7,10" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" >
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="16.712"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock x:Name="textBlock2" Grid.Column="1" HorizontalAlignment="Left" Margin="20,0,0,0" TextWrapping="Wrap" Text="BTC" VerticalAlignment="Center" FontSize="18" FontFamily="PT Sans" Foreground="#1D212C"/>
+                    <TextBlock Grid.Column="2" HorizontalAlignment="Right" Text="5.040000" VerticalAlignment="Center" FontSize="17" FontFamily="PT Sans Pro Narrow" Foreground="#1D212C"/>
+                    <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Text="Bitcoin" VerticalAlignment="Center" FontSize="11" FontFamily="PT Sans" Foreground="#92969F" Margin="20,0,0,0" />
+                    <TextBlock Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" Text="$35 578.91" VerticalAlignment="Center" FontSize="11" FontFamily="PT Sans" Foreground="#92969F" FontWeight="Bold"/>
+                </Grid>
+                <Grid Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="17" MaxHeight="40" RadiusY="17" Grid.RowSpan="2" Margin="1,5,0,2.5" Fill="White"/>
+                    <Image Source="/assets/ethereum.png" Width="25" RenderTransformOrigin="0.5,0.5" Margin="10,9,5,9" Grid.RowSpan="2">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="14.108"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock Text="ETH" FontSize="18" Foreground="#1D212C" Grid.Column="1" Margin="20,0,0,0" FontFamily="PT Sans Caption" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="2" Text="160.020000" FontSize="17" HorizontalAlignment="Right" FontFamily="PT Sans Pro Narrow" Foreground="#1D212C" VerticalAlignment="Center" />
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="Ethereum" FontSize="11" FontFamily="PT Sans" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="#92969F"/>
+                    <TextBlock Grid.Row="1" Grid.Column="2" FontSize="11" FontWeight="Bold" HorizontalAlignment="Right" FontFamily="PT Sans" Margin="0,2" Foreground="#92969F" VerticalAlignment="Center" ><Run Text="$36"/><Run Text=" "/><Run Text="677.68"/></TextBlock>
+                </Grid>
+                <Grid Margin="0,52" Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="17" MaxHeight="40" RadiusY="17" Grid.RowSpan="2" Margin="1,5,0,2.5" Fill="White"/>
+                    <Image Source="/assets/litcoin.png" Width="25" RenderTransformOrigin="0.5,0.5" Margin="10,9,5,9" Grid.RowSpan="2">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="14.108"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock FontSize="18" Foreground="#1D212C" Grid.Column="1" Margin="20,0,0,0" FontFamily="PT Sans Caption" VerticalAlignment="Center" ><Run Text="L"/><Run Text="TC"/></TextBlock>
+                    <TextBlock Grid.Column="2" FontSize="17" HorizontalAlignment="Right" FontFamily="PT Sans Pro Narrow" Foreground="#1D212C" VerticalAlignment="Center" ><Run Text="135."/><Run Text="8"/><Run Text="90000"/></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="11" FontFamily="PT Sans" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="#92969F"><Run Text="L"/><Run Text="it"/><Run Text="e"/><Run Text="coin"/></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="2" FontSize="11" FontWeight="Bold" HorizontalAlignment="Right" FontFamily="PT Sans" Margin="0,2" Foreground="#92969F" VerticalAlignment="Center" ><Run Text="$"/><Run Text="7035.02"/></TextBlock>
+                </Grid>
+                <Grid Height="48">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Rectangle RadiusX="17" MaxHeight="40" RadiusY="17" Grid.RowSpan="2" Margin="1,5,0,2.5" Fill="White"/>
+                    <Image Source="/assets/binance.png" Width="25" RenderTransformOrigin="0.5,0.5" Margin="10,9,5,9" Grid.RowSpan="2">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="14.108"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                    <TextBlock Text="BNB" FontSize="18" Foreground="#1D212C" Grid.Column="1" Margin="20,0,0,0" FontFamily="PT Sans Caption" VerticalAlignment="Center" />
+                    <TextBlock Grid.Column="2" FontSize="17" HorizontalAlignment="Right" FontFamily="PT Sans Pro Narrow" Foreground="#1D212C" VerticalAlignment="Center" ><Run Text="16"/><Run Text="5"/><Run Text=" 368"/><Run Text="."/><Run Text="4"/><Run Text="0"/><Run Text="0000"/></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="11" FontFamily="PT Sans" VerticalAlignment="Center" Margin="20,0,0,0" Foreground="#92969F"><Run Text="B"/><Run Text="inance"/><Run Text=" Coin"/></TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="2" FontSize="11" FontWeight="Bold" HorizontalAlignment="Right" FontFamily="PT Sans" Margin="0,2" Foreground="#92969F" VerticalAlignment="Center" ><Run Text="$"/><Run Text="1 587 536.64"/></TextBlock>
+                </Grid>
+            </StackPanel>
+            <TextBlock x:Name="textBlock3" Grid.Column="2" HorizontalAlignment="Left" Margin="32,72,0,0" TextWrapping="Wrap" Text="1st Step" VerticalAlignment="Top" Foreground="#92969F" FontSize="11"/>
+            <TextBlock x:Name="textBlock4" Grid.Column="2" HorizontalAlignment="Left" Margin="32,85,0,0" TextWrapping="Wrap" Text="Select" Foreground="#1D212C" VerticalAlignment="Top" FontSize="18"/>
+            <Separator Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Margin="107,82,0,0" Width="75" Background="#92969F"/>
+            <Separator Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Margin="182,82,0,0" Width="75" Background="LightGray"/>
+
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="287,72,0,0" TextWrapping="Wrap" Text="2nd Step" VerticalAlignment="Top" Foreground="#92969F" FontSize="11"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="287,85,0,0" TextWrapping="Wrap" Text="Confirm" Foreground="#92969F" VerticalAlignment="Top" FontSize="18"/>
+            <Separator Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Margin="377,82,0,0" Width="145" Background="LightGray"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="555,72,0,0" TextWrapping="Wrap" Text="3rd Step" VerticalAlignment="Top" Foreground="#92969F" FontSize="11"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="555,85,0,0" TextWrapping="Wrap" Text="Success" Foreground="#92969F" VerticalAlignment="Top" FontSize="18"/>
+
+            <Rectangle Grid.Column="2" Fill="White" HorizontalAlignment="Left" Height="496" Margin="0,173,0,0" VerticalAlignment="Top" Width="664"/>
+
+            <Rectangle Grid.Column="2" Fill="White" HorizontalAlignment="Left" Height="496" Margin="717,173,0,0" VerticalAlignment="Top" Width="45"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="57,272,0,0" Text="Bitcoin" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="18"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="57,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="PT Sans Narrow" Text="5.04 BTC ($53 578.91)"/>
+
+            <Rectangle Grid.Column="2" Fill="#F6F5FB" HorizontalAlignment="Left" Height="41" Margin="185,275,0,0" RadiusY="17" RadiusX="17" VerticalAlignment="Top" Width="38"/>
+            <Image x:Name="image" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="192,284,0,0" VerticalAlignment="Top" Width="23" Source="Assets/bitcoin_purple.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="8.16"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/assets/down.png" Margin="238,291,519,448" Grid.Column="2"/>
+
+
+            <TextBlock x:Name="textBlock1_Copy3" Grid.Column="2" HorizontalAlignment="Left" Margin="416,272,0,0" TextWrapping="Wrap" Text="Ethereum" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="18"/>
+            <TextBlock x:Name="textBlock_Copy3" Grid.Column="2" HorizontalAlignment="Left" Margin="416,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="PT Sans Narrow"><Run Text="160 ETH (32672"/><Run Text=".99"/><Run Text=")"/></TextBlock>
+            <Rectangle Grid.Column="2" Fill="#F6F5FB" HorizontalAlignment="Left" Height="41" Margin="544,275,0,0" RadiusY="17" RadiusX="17" VerticalAlignment="Top" Width="38"/>
+            <Image x:Name="image_Copy" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="551,284,0,0" VerticalAlignment="Top" Width="23" Source="Assets/ethereum_purple.png" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="8.16"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/assets/down.png" Margin="597,291,160,448" Grid.Column="2"/>
+
+            <Rectangle Grid.Column="2" Fill="#FF1D212C" HorizontalAlignment="Left" Height="38" Margin="314,359,0,0" RadiusX="17" RadiusY="17" VerticalAlignment="Top" Width="35"/>
+            <Image Grid.Column="2" Source="/assets/convert.png" Width="22" VerticalAlignment="Top" Margin="321,367,424,0" Height="22"/>
+
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="35,389,0,0" Text="You spent" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans" />
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="35,407,0,0" Text="3.000000" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="28" FontFamily="PT Sans Narrow" />
+
+            <Separator Background="#92969F" Grid.Column="2" HorizontalAlignment="Left" Height="15" Margin="35,440,0,0" VerticalAlignment="Top" Width="231"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="35,389,0,0" Text="You spent" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans" />
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="229,407,0,0" Text="BTC" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="28" FontFamily="PT Sans Narrow" />
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="35,455,0,0" Text="19 392.20" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow" />
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="248,455,0,0" Text="USD" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow" />
+
+            <TextBlock x:Name="textBlock1_Copy10" Grid.Column="2" HorizontalAlignment="Left" Margin="393,389,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans"><Run Text="You "/><Run Text="got"/></TextBlock>
+            <TextBlock x:Name="textBlock1_Copy9" Grid.Column="2" HorizontalAlignment="Left" Margin="394,407,0,0" TextWrapping="Wrap" Text="94.426101" VerticalAlignment="Top" Foreground="#92969F" FontSize="28" FontFamily="PT Sans Narrow"/>
+            <TextBlock x:Name="textBlock1_Copy11" Grid.Column="2" HorizontalAlignment="Left" Margin="393,453,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow"><Run Text="19 "/><Run Text="282.39"/></TextBlock>
+            <Separator Grid.Column="2" HorizontalAlignment="Left" Height="15" Margin="395,440,0,0" VerticalAlignment="Top" Width="231" Background="LightGray"/>
+            <TextBlock x:Name="textBlock1_Copy12" Grid.Column="2" HorizontalAlignment="Left" Margin="590,407,0,0" TextWrapping="Wrap" Text="ETH" VerticalAlignment="Top" Foreground="#92969F" FontSize="28" FontFamily="PT Sans Narrow"/>
+            <TextBlock x:Name="textBlock1_Copy13" Grid.Column="2" HorizontalAlignment="Left" Margin="609,453,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow" Text="USD"/>
+            
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="34,586,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow" Text="Market rate"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="34,603,0,0" TextWrapping="Wrap" Text="1 BTC = 31.47 ETH" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="17.5" FontFamily="PT Sans Narrow"/>
+
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="192,586,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#92969F" FontFamily="PT Sans Narrow" Text="Conversion fee:"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="192,603,0,0" TextWrapping="Wrap" Text="12.938539 BNB" VerticalAlignment="Top" Foreground="#FF1D212C" FontSize="17.5" FontFamily="PT Sans Narrow"/>
+
+            <Button Background="#FF1D212C" Grid.Column="2" Height="50" Width="170" Content="Convert Now" Foreground="White" FontSize="15" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,75,123"/> 
+        </Grid>
+    </Border>
+</Window>
